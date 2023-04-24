@@ -1,0 +1,25 @@
+{
+    "name": "Community Visualization",
+    "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+    "organization": "Looker Studio Codelab",
+    "organizationUrl": "https://url",
+    "termsOfServiceUrl": "https://url",
+    "supportUrl": "https://url",
+    "packageUrl": "https://url",
+    "privacyPolicyUrl": "https://url",
+    "description": "Community Visualization Codelab",
+    "devMode": true,
+    "components": [
+        {
+            "id": "tableChart",
+            "name": "Mediakit",
+            "iconUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+            "description": "A simple table chart.",
+            "resource": {
+                "js": "gs://indata-community/mediakit-lvn/mediakit-lvn.js",
+                "config": "gs://indata-community/mediakit-lvn/mediakit-lvn.json",
+                "css": "gs://indata-community/mediakit-lvn/mediakit-lvn.css"
+            }
+        }
+    ]
+}

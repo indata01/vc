@@ -1,0 +1,34 @@
+table {
+    width: 100%;
+    font-family: 'Guardian Sans', sans-serif;
+}
+
+table th {
+    background-color: transparent;
+    align-items: center;
+    padding: 10px;
+}
+
+thead {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+td {
+    padding: 3.2px;
+    text-align: center;
+}
+
+td:nth-child(1) {
+    width: 20%;
+}
+
+td:nth-child(2) {
+    text-align: left;
+    width: 55%;
+    padding-left: 20px;
+}
+
+td:nth-child(3) {
+    width: 25%;
+}

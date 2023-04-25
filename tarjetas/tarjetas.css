@@ -4,11 +4,9 @@ table {
 }
 
 td, tr, th{
-    padding: 15px;
+    padding-top: 5px;
     text-align: center;
     font-weight: bold;
     font-family: 'Guardian Sans', sans-serif;                                   
-    font-size: 48px;
-    letter-spacing: 0.1em;
-    color: #0072ec;
+    letter-spacing: 0.05em;
 }

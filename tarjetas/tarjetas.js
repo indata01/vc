@@ -74,7 +74,8 @@ function drawViz(data) {
   table.appendChild(tableBody);
 
   // Set header color based on style control.
-  tableHeader.style.backgroundColor = data.style.headerBg.value.color;
+  tableBody.style.fontSize = data.style.bodyFontSize.value + 'px';
+  tableBody.style.color = data.style.bodyFontColor.value.color;
 
   // Render the table.
   container.appendChild(table);

@@ -18,14 +18,19 @@
     ],
     "style": [
         {
-            "id": "header",
-            "label": "Table Header",
+            "id": "body",
             "elements": [
                 {
-                    "type": "FILL_COLOR",
-                    "id": "headerBg",
-                    "label": "Header Background Color",
-                    "defaultValue": "#e0e0e0"
+                    "type": "FONT_SIZE",
+                    "id": "bodyFontSize",
+                    "label": "Tamaño de la letra",
+                    "defaultValue": 48
+                },
+                {
+                    "type": "FONT_COLOR",
+                    "id": "bodyFontColor",
+                    "label": "Color de la letra",
+                    "defaultValue": "#02c2f2"
                 }
             ]
         }

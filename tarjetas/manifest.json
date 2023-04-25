@@ -1,24 +1,24 @@
 {
     "name": "Community Visualization",
     "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
-    "organization": "Looker Studio Codelab",
-    "organizationUrl": "https://url",
-    "termsOfServiceUrl": "https://url",
-    "supportUrl": "https://url",
-    "packageUrl": "https://url",
-    "privacyPolicyUrl": "https://url",
-    "description": "Community Visualization Codelab",
+    "organization": "La Verdad Noticias",
+    "organizationUrl": "https://laverdadnoticias.com/",
+    "termsOfServiceUrl": "https://laverdadnoticias.com/",
+    "supportUrl": "https://laverdadnoticias.com/",
+    "packageUrl": "https://laverdadnoticias.com/",
+    "privacyPolicyUrl": "https://laverdadnoticias.com/",
+    "description": "Tarjetas de resultados",
     "devMode": true,
     "components": [
         {
             "id": "tableChart",
-            "name": "Mediakit",
+            "name": "Tarjetas LVN",
             "iconUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
-            "description": "A simple table chart.",
+            "description": "Tarjetas de resultados LVN",
             "resource": {
-                "js": "gs://indata-community/mediakit-lvn/mediakit-lvn.js",
-                "config": "gs://indata-community/mediakit-lvn/mediakit-lvn.json",
-                "css": "gs://indata-community/mediakit-lvn/mediakit-lvn.css"
+                "js": "gs://indata-community/tarjetas/tarjetas.js",
+                "config": "gs://indata-community/tarjetas/tarjetas.json",
+                "css": "gs://indata-community/tarjetas/tarjetas.css"
             }
         }
     ]

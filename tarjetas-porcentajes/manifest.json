@@ -1,0 +1,25 @@
+{
+    "name": "Community Visualization",
+    "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+    "organization": "La Verdad Noticias",
+    "organizationUrl": "https://laverdadnoticias.com/",
+    "termsOfServiceUrl": "https://laverdadnoticias.com/",
+    "supportUrl": "https://laverdadnoticias.com/",
+    "packageUrl": "https://laverdadnoticias.com/",
+    "privacyPolicyUrl": "https://laverdadnoticias.com/",
+    "description": "Tarjetas de porcentajes",
+    "devMode": true,
+    "components": [
+        {
+            "id": "tableChart",
+            "name": "Tarjetas de porcentajes",
+            "iconUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+            "description": "Tarjetas de resultados light LVN",
+            "resource": {
+                "js": "gs://indata-community/tarjetas-porcentajes/tarjetas-porcentajes.js",
+                "config": "gs://indata-community/tarjetas-porcentajes/tarjetas-porcentajes.json",
+                "css": "gs://indata-community/tarjetas-porcentajes/tarjetas-porcentajes.css"
+            }
+        }
+    ]
+}

@@ -9,7 +9,7 @@
                     "label": "Dimensión",
                     "type": "DIMENSION",
                     "options": {
-                        "min": 1,
+                        "min": 0,
                         "max": 5,
                         "supportedTypes": [
                             "DEFAULT"

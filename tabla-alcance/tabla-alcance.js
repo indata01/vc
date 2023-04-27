@@ -57,8 +57,8 @@ function drawViz(data) {
     const tableRow = document.createElement('tr');
     row.forEach(function (cell, index) {
       const tableCell = document.createElement('td');
-      if (typeof cell == 'number') {
-        if (index > 0) {
+      if (index > 0) {
+        if (typeof cell == 'number') {
           tableCell.textContent = new Intl.NumberFormat('es-MX', {
             style: 'percent',
             minimumFractionDigits: 0,
@@ -67,15 +67,14 @@ function drawViz(data) {
         } else {
           tableCell.textContent = cell;
         }
-      } else {
-        tableCell.textContent = cell;
-      } if (index == 0) {
+      } else if (index == 0) {
         tableCell.style.color = '#72abf5';
         tableCell.style.fontWeight = 'bold';
-        tableRow.appendChild(tableCell);
+        tableCell.textContent = cell;
       } else {
         tableRow.appendChild(tableCell);
       }
+      tableRow.appendChild(tableCell);
     });
     tableBody.appendChild(tableRow);
   });

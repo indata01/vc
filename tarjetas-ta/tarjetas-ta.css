@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, tr, th{
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Nexa Book', sans-serif;                                   
+}

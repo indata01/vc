@@ -1,0 +1,25 @@
+{
+    "name": "Community Visualization",
+    "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+    "organization": "Top Adventure",
+    "organizationUrl": "https://topadventure.com/",
+    "termsOfServiceUrl": "https://topadventure.com/",
+    "supportUrl": "https://topadventure.com/",
+    "packageUrl": "https://topadventure.com/",
+    "privacyPolicyUrl": "https://topadventure.com/",
+    "description": "Tarjetas de porcentajes TA",
+    "devMode": true,
+    "components": [
+        {
+            "id": "tableChart",
+            "name": "Tarjetas de porcentajes TA",
+            "iconUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/codelab/img/table-chart.png",
+            "description": "Tarjetas de resultados TA",
+            "resource": {
+                "js": "gs://indata-community/tarjetas-ta-porcentajes/tarjetas-ta-porcentajes.js",
+                "config": "gs://indata-community/tarjetas-ta-porcentajes/tarjetas-ta-porcentajes.json",
+                "css": "gs://indata-community/tarjetas-ta-porcentajes/tarjetas-ta-porcentajes.css"
+            }
+        }
+    ]
+}

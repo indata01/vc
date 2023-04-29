@@ -59,12 +59,10 @@ function drawViz(data) {
       const tableCell = document.createElement('td');
       if (typeof cell == 'number') {
         tableCell.textContent = new Intl.NumberFormat('es-MX', {
-          //notation: 'compact',
+          style: 'percent',
           minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
+          maximumFractionDigits: 1,
         }).format(cell);
-      } else {
-        tableCell.textContent = cell;
       }
       tableRow.appendChild(tableCell);
     });
@@ -76,7 +74,7 @@ function drawViz(data) {
   // Set header color based on style control.
   tableBody.style.fontSize = data.style.bodyFontSize.value + 'px';
   tableBody.style.color = data.style.bodyFontColor.value.color;
-  
+
   // Render the table.
   container.appendChild(table);
 

@@ -1,0 +1,12 @@
+@import url('https://fonts.cdnfonts.com/css/nexa');
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, tr, th{
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'Nexa Light Regular', 'Nexa';
+    src: url(./NexaLight.otf);                                    
+}

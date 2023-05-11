@@ -82,3 +82,5 @@ function drawViz(data) {
 
 // Subscribe to data and style changes. Use the table format for data.
 dscc.subscribeToData(drawViz, { transform: dscc.tableTransform });
+
+//Esto es una prueba

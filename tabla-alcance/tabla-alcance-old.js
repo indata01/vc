@@ -45,17 +45,8 @@ function drawViz(data) {
   // Create the table.
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');
-
   const tableBody = document.createElement('tbody');
-  //Creamos etiquetas de bootstrap
-  let link = document.createElement('link');
-  link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css';
-  link.rel = 'stylesheet';
-  link.integrity = 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC';
-  crossorigin = 'anonymous';
 
-
-  //Se crea el encabezado de la tabla
   data.tables.DEFAULT.headers.forEach(function (column) {
     const tableColumn = document.createElement('th');
     tableColumn.textContent = column.name;
@@ -87,8 +78,6 @@ function drawViz(data) {
     });
     tableBody.appendChild(tableRow);
   });
-
-  //Agregamos encabezado y body a la tabla
   table.appendChild(tableHeader);
   table.appendChild(tableBody);
 

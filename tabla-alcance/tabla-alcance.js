@@ -32,6 +32,21 @@
 });
 function drawViz(data) {
 
+  //CSS de bootstrap
+  let link = document.createElement('link');
+  link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css';
+  link.rel = 'stylesheet';
+  link.integrity = 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC';
+  crossorigin = 'anonymous';
+  
+
+  //JS de bootstrap
+  let script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js';
+  script.integrity = 'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM';
+  script.crossorigin = 'anonymous';
+  document.getElementsByTagName('body')[0].appendChild(script);
+
   // Container setup.
   let container = document.getElementById('container');
   if (container) {
@@ -45,15 +60,8 @@ function drawViz(data) {
   // Create the table.
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');
-
   const tableBody = document.createElement('tbody');
-  //Creamos etiquetas de bootstrap
-  let link = document.createElement('link');
-  link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css';
-  link.rel = 'stylesheet';
-  link.integrity = 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC';
-  crossorigin = 'anonymous';
-
+  tableBody.classList.add('border', 'border-dark', 'bg-primary');
 
   //Se crea el encabezado de la tabla
   data.tables.DEFAULT.headers.forEach(function (column) {
@@ -77,6 +85,7 @@ function drawViz(data) {
           tableCell.textContent = cell;
         }
       } else if (index == 0) {
+        tableCell.style.border = '5px solid green';
         tableCell.style.color = '#72abf5';
         tableCell.style.fontWeight = 'bold';
         tableCell.textContent = cell;

@@ -3,20 +3,20 @@ table {
     font-family: 'Guardian Sans', sans-serif;
 }
 
-table th {
+/*table th {
     background-color: transparent;
     align-items: center;
     padding: 10px;
-}
+}*/
 
 td {
     padding: 2.5px;
     text-align: center;
 }
 
-thead {
+/*thead {
     color: transparent;
-}
+}*/
 
 td:nth-child(1) {
     width: 15%;

@@ -38,14 +38,14 @@ function drawViz(data) {
   link.rel = 'stylesheet';
   link.integrity = 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC';
   crossorigin = 'anonymous';
-  
+  document.body.appendChild(link);
 
   //JS de bootstrap
   let script = document.createElement('script');
   script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js';
   script.integrity = 'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM';
   script.crossorigin = 'anonymous';
-  document.getElementsByTagName('body')[0].appendChild(script);
+  document.body.appendChild(script);
 
   // Container setup.
   let container = document.getElementById('container');
@@ -61,7 +61,7 @@ function drawViz(data) {
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');
   const tableBody = document.createElement('tbody');
-  tableBody.classList.add('border', 'border-dark', 'bg-primary');
+  tableHeader.classList.add('header');
 
   //Se crea el encabezado de la tabla
   data.tables.DEFAULT.headers.forEach(function (column) {

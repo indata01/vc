@@ -14,9 +14,11 @@ td {
     text-align: center;
 }
 
-/*thead {
-    color: transparent;
-}*/
+.header {
+    color: white;
+    background-color: yellow;
+    font-size: 36px;
+}
 
 td:nth-child(1) {
     width: 15%;

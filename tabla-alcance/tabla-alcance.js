@@ -37,8 +37,8 @@ function drawViz(data) {
   if (container) {
     container.textContent = '';
   } else {
-    container = document.createElement('div')
-    container.id = 'container'
+    container = document.createElement('div');
+    container.id = 'container';
     document.body.appendChild(container);
   }
 
@@ -53,17 +53,22 @@ function drawViz(data) {
     tableColumn.textContent = column.name;
     tableHeader.appendChild(tableColumn);
   });
-  data.tables.DEFAULT.rows.forEach(function (row, index) {
+  data.tables.DEFAULT.rows.forEach(function (row) {
     const tableRow = document.createElement('tr');
     row.forEach(function (cell) {
       const tableCell = document.createElement('td');
       if (typeof cell == 'number') {
         tableCell.textContent = new Intl.NumberFormat('es-MX', {
+          notation: 'compact',
+          style: "decimal",
           minimumFractionDigits: 0,
-          maximumFractionDigits: 0,
+          maximumFractionDigits: 2,
         }).format(cell);
       }
       tableCell.textContent = cell;
+      if (tableCell.textContent  == 'LAVERDADNOTICIAS.COM') {
+        tableRow.classList.add('lvn');
+      }; 
       tableRow.appendChild(tableCell);
     });
     tableBody.appendChild(tableRow);

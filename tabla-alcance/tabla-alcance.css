@@ -2,13 +2,13 @@ body {
     font-family: 'Guardian Sans', sans-serif;
 }
 
-.container {
+#container {
     width: 100%;
 }
 
 table {
-    width: 90%;
-    margin: 15px;
+    width: 95%;
+    margin: 15px auto;
     border-collapse: collapse;
     border-radius: 40px 40px;
     border-style: hidden;
@@ -17,19 +17,24 @@ table {
 
 td {
     border: 2px solid #72abf5;
-    padding: 10px 20px;
+    padding: 5px 15px;
     font-size: 30px;
     text-align: center;
-    min-width: 100px;
 }
 
 th {
     border: 2px solid #72abf5;
-    font-size: 30px;
+    font-size: 35px;
     color: black;
     font-weight: bold;
     background-color: transparent;
     height: 70px;
+}
+
+tr.lvn td {
+    color: #72abf5;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 td:nth-child(2) {

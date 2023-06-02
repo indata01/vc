@@ -32,21 +32,6 @@
 });
 function drawViz(data) {
 
-  //CSS de bootstrap
-  let link = document.createElement('link');
-  link.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css';
-  link.rel = 'stylesheet';
-  link.integrity = 'sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC';
-  crossorigin = 'anonymous';
-  document.body.appendChild(link);
-
-  //JS de bootstrap
-  let script = document.createElement('script');
-  script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js';
-  script.integrity = 'sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM';
-  script.crossorigin = 'anonymous';
-  document.body.appendChild(script);
-
   // Container setup.
   let container = document.getElementById('container');
   if (container) {
@@ -61,7 +46,6 @@ function drawViz(data) {
   const table = document.createElement('table');
   const tableHeader = document.createElement('thead');
   const tableBody = document.createElement('tbody');
-  tableHeader.classList.add('header');
 
   //Se crea el encabezado de la tabla
   data.tables.DEFAULT.headers.forEach(function (column) {
@@ -69,29 +53,17 @@ function drawViz(data) {
     tableColumn.textContent = column.name;
     tableHeader.appendChild(tableColumn);
   });
-
-  data.tables.DEFAULT.rows.forEach(function (row) {
+  data.tables.DEFAULT.rows.forEach(function (row, index) {
     const tableRow = document.createElement('tr');
-    row.forEach(function (cell, index) {
+    row.forEach(function (cell) {
       const tableCell = document.createElement('td');
-      if (index > 0) {
-        if (typeof cell == 'number') {
-          tableCell.textContent = new Intl.NumberFormat('es-MX', {
-            style: 'percent',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0,
-          }).format(cell);
-        } else {
-          tableCell.textContent = cell;
-        }
-      } else if (index == 0) {
-        tableCell.style.border = '5px solid green';
-        tableCell.style.color = '#72abf5';
-        tableCell.style.fontWeight = 'bold';
-        tableCell.textContent = cell;
-      } else {
-        tableRow.appendChild(tableCell);
+      if (typeof cell == 'number') {
+        tableCell.textContent = new Intl.NumberFormat('es-MX', {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0,
+        }).format(cell);
       }
+      tableCell.textContent = cell;
       tableRow.appendChild(tableCell);
     });
     tableBody.appendChild(tableRow);
@@ -100,12 +72,6 @@ function drawViz(data) {
   //Agregamos encabezado y body a la tabla
   table.appendChild(tableHeader);
   table.appendChild(tableBody);
-
-  // Set header color based on style control.
-  tableHeader.style.backgroundColor = data.style.headerBg.value.color;
-  tableHeader.style.fontSize = data.style.textFontSize.value + 'px';
-  tableBody.style.backgroundColor = data.style.bodyBg.value.color;
-  tableBody.style.fontSize = data.style.bodyFontSize.value + 'px';
 
   // Render the table.
   container.appendChild(table);
